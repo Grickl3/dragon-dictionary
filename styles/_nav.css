@@ -1,0 +1,34 @@
+
+
+
+.nav {
+	position: fixed;
+	width: 100%;
+	/*background-color: grey;*/
+}
+
+.nav__home-circle {
+	position: absolute;
+	top: -50px;
+	left: -50px;
+	width: 50px;
+	height: 50px;
+
+	padding: 75px;
+
+	border-radius: 100px;
+	border: 3px solid green;
+}
+
+.nav__home-button {
+	text-align: center;
+}
+
+.nav__link {
+	float: right;
+	margin: 10px 60px 10px 0;
+}
+
+.nav__link:hover {
+
+}

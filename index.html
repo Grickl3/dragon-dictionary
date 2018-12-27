@@ -1,9 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="styles/_brand.css">
+	<link rel="stylesheet" type="text/css" href="styles/_content.css">
+	<link rel="stylesheet" type="text/css" href="styles/_nav.css">
+	<link rel="stylesheet" type="text/css" href="styles/_main-panel.css">
+
+	<script type="text/javascript" src="markup/definition.js"></script>
+	<script type="text/javascript" src="markup/about.js"></script>
+
 	<title>Dragon Children's Dictionary</title>
 </head>
 <body>
-	<h1>Hello, World!</h1>
+	<div class="nav">
+		<div class="nav__home-circle">
+			<span id="home" class="nav__home-button">HOME</span>
+		</div><!-- HOME CIRCLE -->
+
+		<div class="nav__link-box">
+			<span id="about" class="nav__link">About</span>
+			<span id="contact" class="nav__link">Contact</span>
+		</div><!-- NAV LINK BOX -->
+	</div><!-- NAV -->
+
+	<div class="sidebar">
+		<div class="sidebar__edge"></div>
+		<div class="sidebar__handle"></div>
+		<div id="sidebar__content" class="sidebar__content"></div>
+	</div><!-- SIDE BAR -->
+
+	<div id="main-panel" class="main-panel">
+	</div><!-- MAIN PANEL -->
+
+	<div id="ad-box" class="ad-box">
+	</div><!-- AD BOX -->
+
+	<div class="footer">
+		<div class="footer__main"></div>
+		<div class="footer__expander"></div>
+	</div><!-- FOOTER -->
+
+	<script type="text/javascript">
+		var mainPanel = document.getElementById("main-panel");
+		var aboutLink = document.getElementById("about");
+		var homeButton = document.getElementById("home");
+
+		aboutLink.addEventListener("click", function() {aboutLoad(mainPanel)});
+		home.addEventListener("click", function() {definition(mainPanel)});
+
+		definition(mainPanel);
+
+	</script>
 </body>
 </html>
