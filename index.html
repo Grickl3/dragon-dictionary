@@ -8,16 +8,19 @@
 	<link rel="stylesheet" type="text/css" href="styles/_content.css">
 	<link rel="stylesheet" type="text/css" href="styles/_nav.css">
 	<link rel="stylesheet" type="text/css" href="styles/_main-panel.css">
+	<link rel="stylesheet" type="text/css" href="styles/_sidebar.css">
+	<link rel="stylesheet" type="text/css" href="styles/_footer.css">
 
 	<script type="text/javascript" src="markup/definition.js"></script>
 	<script type="text/javascript" src="markup/about.js"></script>
+	<script type="text/javascript" src="markup/contact.js"></script>
 
 	<title>Dragon Children's Dictionary</title>
 </head>
 <body>
 	<div class="nav">
 		<div class="nav__home-circle">
-			<span id="home" class="nav__home-button">HOME</span>
+			<span id="home" class="nav__home-button">HOME</span> 
 		</div><!-- HOME CIRCLE -->
 
 		<div class="nav__link-box">
@@ -28,7 +31,7 @@
 
 	<div class="sidebar">
 		<div class="sidebar__edge"></div>
-		<div class="sidebar__handle"></div>
+		<div id="sidebar__handle" class="sidebar__handle"></div>
 		<div id="sidebar__content" class="sidebar__content"></div>
 	</div><!-- SIDE BAR -->
 
@@ -40,6 +43,32 @@
 
 	<div class="footer">
 		<div class="footer__main"></div>
+			<div class="footer__elipsis">
+				<div class="footer__elipsis-dot"></div>
+				<div class="footer__elipsis-dot"></div>
+				<div class="footer__elipsis-dot"></div>
+			</div><!-- FOOTER ELIPSIS -->
+			<div class="footer__elements-box">
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+				<div class="footer__element">
+				</div><!-- FOOTER ELEMENT -->
+			</div><!-- FOOTER ELEMENTS BOX -->
+			<div class="footer__elipsis">
+				<div class="footer__elipsis-dot"></div>
+				<div class="footer__elipsis-dot"></div>
+				<div class="footer__elipsis-dot"></div>
+			</div><!-- FOOTER ELIPSIS -->
 		<div class="footer__expander"></div>
 	</div><!-- FOOTER -->
 
@@ -47,8 +76,10 @@
 		var mainPanel = document.getElementById("main-panel");
 		var aboutLink = document.getElementById("about");
 		var homeButton = document.getElementById("home");
+		var contactLink = document.getElementById("contact");
 
 		aboutLink.addEventListener("click", function() {aboutLoad(mainPanel)});
+		contactLink.addEventListener("click", function() {contactLoad(mainPanel)});
 		home.addEventListener("click", function() {definition(mainPanel)});
 
 		definition(mainPanel);
