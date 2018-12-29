@@ -14,13 +14,14 @@
 	<script type="text/javascript" src="markup/definition.js"></script>
 	<script type="text/javascript" src="markup/about.js"></script>
 	<script type="text/javascript" src="markup/contact.js"></script>
+	<script type="text/javascript" src="markup/sidebar.js"></script>
 
 	<title>Dragon Children's Dictionary</title>
 </head>
 <body>
 	<div class="nav">
-		<div class="nav__home-circle">
-			<span id="home" class="nav__home-button">HOME</span> 
+		<div id="home" class="nav__home-circle">
+			<span class="nav__home-button">HOME</span> 
 		</div><!-- HOME CIRCLE -->
 
 		<div class="nav__link-box">
@@ -30,9 +31,18 @@
 	</div><!-- NAV -->
 
 	<div class="sidebar">
-		<div class="sidebar__edge"></div>
-		<div id="sidebar__handle" class="sidebar__handle"></div>
-		<div id="sidebar__content" class="sidebar__content"></div>
+		<div id="sidebar-edge" class="sidebar__edge"></div>
+		<div id="sidebar-handle" class="sidebar__handle"></div>
+		<div id="sidebar-content" class="sidebar__content sidebar__content__closed">
+			<div id="tile-box" class="sidebar__tile-box tiles__hidden">
+				<div id="verbs" class="sidebar__tile "><span>All Verbs</span></div>
+				<div id="activities" class="sidebar__tile"><span>Activities</span></div>
+				<div id="expressions" class="sidebar__tile"><span>Expressions</span></div>
+				<div id="explore" class="sidebar__tile"><span>Explore</span></div>
+				<div class="sidebar__tile"><span>More Coming Soon</span></div>
+				<div class="sidebar__tile"><span>More Coming Soon</span></div>
+			</div><!-- TILE BOX -->
+		</div><!-- SIDEBAR CONTENT -->
 	</div><!-- SIDE BAR -->
 
 	<div id="main-panel" class="main-panel">
@@ -77,10 +87,31 @@
 		var aboutLink = document.getElementById("about");
 		var homeButton = document.getElementById("home");
 		var contactLink = document.getElementById("contact");
+		var sidebarHandle = document.getElementById("sidebar-handle");
+		var sidebarEdge = document.getElementById("sidebar-edge");
+		var sidebarContent = document.getElementById("sidebar-content");
+		var tileBox = document.getElementById("tile-box");
+		var verbs = document.getElementById("verbs");
+		var activities = document.getElementById("activities");
+		var expressions = document.getElementById("expressions");
+		var explore = document.getElementById("explore");
 
 		aboutLink.addEventListener("click", function() {aboutLoad(mainPanel)});
 		contactLink.addEventListener("click", function() {contactLoad(mainPanel)});
 		home.addEventListener("click", function() {definition(mainPanel)});
+		sidebarHandle.addEventListener("click", function() {openSidebar()});
+
+		verbs.addEventListener("click", function() {setVerbs()});
+		verbs.addEventListener("click", function() {openSidebar()});
+
+		activities.addEventListener("click", function() {setActivies()});
+		activities.addEventListener("click", function() {openSidebar()});
+
+		expressions.addEventListener("click", function() {setExpressions()});
+		expressions.addEventListener("click", function() {openSidebar()});
+
+		explore.addEventListener("click", function() {setExplore()});
+		explore.addEventListener("click", function() {openSidebar()});
 
 		definition(mainPanel);
 

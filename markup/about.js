@@ -8,11 +8,10 @@ function aboutLoad(a) {
 	"</p>" + "<ul>" + 
 		"<li>" + "Navigation" + "</li>" +
 		"<li>" + "Brief Explanations of Content" + "</li>" +
-		"<li>" + "Some Placeholder Content" + "</li>" +
 	"</ul>" + "<p>" + 
 	"Not included in this prototype are:" + "<ul>" +
 		"<li>" + "Styles of Any Kind" + "</li>" +
-		"<li>" + "A Large Body of Content (which will be best added once the CMS is built)" + "</li>" +
+		"<li>" + "Actual Vocabulary Terms, at least for now" + "</li>" +
 		"<li>" + "Ability to Add Content Without Editing Source Code" + "</li>" +
 		"<li>" + "Mobile Optimization (this prototype is designed for desktop use only)" + "</li>" +
 		"<p>" +
